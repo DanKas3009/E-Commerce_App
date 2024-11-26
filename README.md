@@ -1,6 +1,14 @@
 # E-Commerce_App
 
+Bassically here, I have three apps:
+
+- the main one which is eCommerce_app
+- the customer app which includes authentification functions with both the login and register page.
+- and the store app that contains all the models needed to run an e-commerce application
+
 The UML representation of the database
+
+````mermaid
 
 classDiagram
     class Customer{
@@ -64,3 +72,6 @@ classDiagram
     Inventory "1" -- "*" Product
     Cart "1" -- "*" CartItem
     CartItem "*" -- "1" Product
+
+    ```
+````
