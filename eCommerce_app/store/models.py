@@ -1,11 +1,10 @@
 from django.db import models
-from ..customer.models import Customer
+from customer.models import Customer
 
 class Order(models.Model):
     orderID = models.AutoField(primary_key=True)
     OrderDate = models.DateField()
     CustomerID = models.ForeignKey( Customer , on_delete=models.CASCADE)
-     
     OrderTotal = models.DecimalField(max_digits=10, decimal_places=2)
     OrderStatus = models.CharField(max_length=100)
     ShippingAddress = models.CharField(max_length=300)
@@ -25,7 +24,7 @@ class OrderDetails(models.Model):
 
 class Inventory(models.Model):
     inventoryID = models.AutoField(primary_key=True)
-    Product = models.OneToOneField('Product', on_delete=models.CASCADE, primary_key=True)
+    Product = models.OneToOneField('Product', on_delete=models.CASCADE)
     QuantityInStock = models.PositiveIntegerField()
     ReorderLevel = models.PositiveIntegerField()
     LastRestockDate = models.DateField()
@@ -51,7 +50,7 @@ class Product(models.Model):
 
 class Cart(models.Model):
     cartID = models.AutoField(primary_key=True)
-    customer = models.ForeignKey('Customer', on_delete=models.CASCADE)  # Assuming a Customer model
+    customer = models.ForeignKey( Customer, on_delete=models.CASCADE)  # Assuming a Customer model
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

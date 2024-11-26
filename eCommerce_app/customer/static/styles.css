@@ -1,0 +1,94 @@
+.main-container {
+    display: flex;
+}
+
+.logo-picture-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.sign-in-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.sign-in-title {
+  color: #00b3b3;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.sign-in-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.form-label {
+  font-size: 0.875rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  margin-left: 4px;
+}
+
+.form-input {
+  padding: 0.75rem 1rem;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  box-shadow: 0 11px 29px rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
+  width: 100%;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #00b3b38c;
+}
+
+.forgot-password {
+  font-size: 0.875rem;
+  color: #444;
+  text-decoration: none;
+  margin-top: 0.5rem;
+  display: block;
+  text-align: right;
+}
+
+.sign-in-button {
+  width: 144px;
+  background-color: #00b3b3;
+  color: #fff;
+  border: none;
+  border-radius: 21px;
+  padding: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sign-in-button:hover {
+  background-color: #009999;
+}
+
+.create-account {
+  font-size: 0.875rem;
+  margin-top: 1rem;
+}
+
+.create-account a {
+  color: #00b3b3;
+  text-decoration: none;
+}
