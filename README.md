@@ -66,7 +66,7 @@ classDiagram
         - cartID
     }
 
-    Customer "1" -- "1" Order
+    Customer "1" -- "*" Order
     Order "1" -- "*" OrderDetails
     OrderDetails "*" -- "1" Product
     Inventory "1" -- "*" Product
